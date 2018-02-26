@@ -21,14 +21,14 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header" style="text-align: center">Easy Tickets | Autenticação</div>
       <div class="card-body">
-        <form>
+        <form method="post" action="<?php echo base_url('Login/logar') ?>">
           <div class="form-group">
             <label for="exampleInputEmail1">E-mail</label>
-            <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Enter email" name="login">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Senha</label>
-            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password" name="senha">
           </div>
           <div class="form-group">
             <div class="form-check">
@@ -36,7 +36,7 @@
                 <input class="form-check-input" type="checkbox"> Lembrar Senha</label>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="index.html">Entrar</a>
+          <button class="btn btn-primary btn-block">Entrar</button>
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="register.html">Cadastrar Conta</a>
