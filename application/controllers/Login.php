@@ -6,6 +6,7 @@ class Login extends CI_Controller {
 	public function __construct() {
 
 		parent::__construct();
+		$this->load->model('Login_model', 'login');
 	}
 
 	public function index() {
@@ -20,17 +21,22 @@ class Login extends CI_Controller {
 		$login   = $this->input->post("login");
 		$senha   = md5($this->input->post("senha"));
 
-		$this->db->where("login", $login);
-		$this->db->where("senha", $senha);
+		$this->dados['login'] = $this->login->getusuarios($login, $senha);
 
-		$query = $this->db->get("usuarios"); // tabela usuarios
+		if (count($this->dados['login']) == 1):
+			$this->session->set_userdata("sessao", $this->dados['login']);
 
-		if ($query->num_rows() == 1):
-			echo 'achou';
+			redirect('Principal/');
 		else:
-			echo 'nada';
+			redirect('');
 		endif;
 	}
+
+	public function logoff(){
+ 		$this->session->set_userdata("sessao", "");
+ 		//$this->session->destroy();
+ 		redirect('');
+ 	}
 }
 
 /* End of file Login.php */

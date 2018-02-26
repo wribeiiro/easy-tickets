@@ -23,7 +23,7 @@
       <div class="card-body">
         <form method="post" action="<?php echo base_url('Login/logar') ?>">
           <div class="form-group">
-            <label for="exampleInputEmail1">E-mail</label>
+            <label for="exampleInputEmail1">Usuário</label>
             <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Enter email" name="login">
           </div>
           <div class="form-group">
