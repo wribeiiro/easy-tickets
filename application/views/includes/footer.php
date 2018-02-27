@@ -1,7 +1,7 @@
 <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>Copyright © Your Website 2018</small>
+          <small>Copyright © <a href="http://www.wribeiiro.com.br" style="text-decoration: none">Wellisson Ribeiro</a> <?php echo date('Y'); ?></small>
         </div>
       </div>
     </footer>

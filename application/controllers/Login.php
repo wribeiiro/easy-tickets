@@ -25,9 +25,9 @@ class Login extends CI_Controller {
 
 		if (count($this->dados['login']) == 1):
 			$this->session->set_userdata("sessao", $this->dados['login']);
-
 			redirect('Principal/');
 		else:
+			$this->session->set_flashdata('erro_login', 'Usuário ou senha inválidos!');
 			redirect('');
 		endif;
 	}

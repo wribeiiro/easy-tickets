@@ -6,14 +6,15 @@ class Principal extends CI_Controller {
 	public function __construct() {
 
 		parent::__construct();
-		//$this->load->model('Login_model', 'login');
+		$this->load->model('Usuarios_model', 'usuarios');
 		$this->load->library('Controle_acesso', 'controle_acesso');
 		$this->controle_acesso->controlar();
 	}
 
 	public function index() {
 		
-		$this->dados['titulo'] = 'Easy Tickets | Principal';
+		$this->dados['titulo']     = 'Easy Tickets | Principal';
+		$this->dados['totalUsers'] = $this->usuarios->contarUsuarios();
 		$this->load->view('Principal/index', $this->dados);
 	}
 }

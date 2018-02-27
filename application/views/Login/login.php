@@ -21,6 +21,15 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header" style="text-align: center">Easy Tickets | Autenticação</div>
       <div class="card-body">
+        <?php 
+           if($this->session->flashdata('erro_login') != "" ):
+              echo '<div class="alert alert-danger">
+                      <button type="button" class="close" data-dismiss="alert">×</button>
+                          '.$this->session->flashdata('erro_login').'
+                    </div>'
+                  ;
+          endif;
+        ?>
         <form method="post" action="<?php echo base_url('Login/logar') ?>">
           <div class="form-group">
             <label for="exampleInputEmail1">Usuário</label>

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Easy Tickets - Sistema rápido para tickets">
+    <meta name="author" content="Wellisson Ribeiro">
     <title><?php echo $titulo ?></title>
     <!-- Bootstrap core CSS-->
     <link href="<?php echo site_url() ?>assets/template-sbadmin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
