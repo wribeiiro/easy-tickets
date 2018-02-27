@@ -17,7 +17,9 @@ class Usuarios_model extends CI_Model {
 	}
 
 	public function listarUsuarios() {
-
+		$this->db->order_by("id", "DESC");
+		$query = $this->db->get("usuarios");
+		return $query->result();
 	}
 }
 

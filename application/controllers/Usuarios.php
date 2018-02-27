@@ -12,6 +12,13 @@ class Usuarios extends CI_Controller {
 	public function index(){
 		
 	}
+
+	public function listarUsuarios() {
+		$this->load->model("Usuarios_model", "usuarios");
+		$this->dados["titulo"]  = "Easy Tickets - Listar Usuários";
+		$this->dados["usuario"] = $this->usuarios->listarUsuarios();
+		$this->load->view("Usuarios/listar", $this->dados);
+	}
 }
 
 /* End of file Usuarios.php */

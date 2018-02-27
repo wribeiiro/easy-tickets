@@ -68,7 +68,7 @@
 							<a href="<?php echo site_url('Usuarios/adicionar') ?>"><i class="fa fa-fw fa-plus"></i> Abrir</a>
 						</li>
 						<li>
-							<a href="<?php echo site_url('Usuarios/listar') ?>"><i class="fa fa-fw fa-list"></i> Listar</a>
+							<a href="<?php echo site_url('Usuarios') ?>"><i class="fa fa-fw fa-list"></i> Listar</a>
 						</li>
 					</ul>
 				</li>
