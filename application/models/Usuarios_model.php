@@ -21,6 +21,12 @@ class Usuarios_model extends CI_Model {
 		$query = $this->db->get("usuarios");
 		return $query->result();
 	}
+
+	public function adicionarUsuarios() {
+		$this->db->order_by("id", "DESC");
+		$query = $this->db->get("usuarios");
+		return $query->result();
+	}
 }
 
 /* End of file Usuarios_model.php */

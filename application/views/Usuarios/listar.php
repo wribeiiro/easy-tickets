@@ -17,7 +17,7 @@
 
         <div class="row">
             <div class="col-xl-12 col-sm-6 mb-3">
-                <a href="" class="btn btn-info"><i class="fa fa-plus"></i> Adicionar</a>
+                <a href="<?php echo site_url('Usuarios/adicionarusuarios') ?>" class="btn btn-info"><i class="fa fa-plus"></i> Adicionar</a>
             </div>
         </div>
       	<div class="row">

@@ -15,9 +15,15 @@ class Principal extends CI_Controller {
 		
 		$this->dados['titulo']     = 'Easy Tickets | Principal';
 		$this->dados['totalUsers'] = $this->usuarios->contarUsuarios();
+		$this->dados['noticias']   = $this->getNoticias();
 		$this->load->view('Principal/index', $this->dados);
 	}
-}
 
+	public function getNoticias() {
+		if($file = simplexml_load_file('http://www.contabeis.com.br/rss/noticias/') or die('Erro ao buscar XML!')):
+			return $file; 
+		endif;
+	}
+}
 /* End of file Principal.php */
 /* Location: ./application/controllers/Principal.php */
