@@ -154,12 +154,15 @@
 					</form>
 				</li>
 				<li class="nav-item">
-					<!--
-					<a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-						<i class="fa fa-fw fa-sign-out"></i>Logout</a>-->
-						<a class="nav-link" href="<?php echo site_url('Login/logoff') ?>">
-							<i class="fa fa-fw fa-sign-out"></i> Sair
-						</a>
+					<a class="nav-link" href="#">
+						<i class="fa fa"></i>           
+							<?php foreach ($sessao as $ses): echo $ses->nome;endforeach;?>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo site_url('Login/logoff') ?>">
+						<i class="fa fa-fw fa-sign-out"></i> Sair
+					</a>
 				</li>
 			</ul>
 		</div>

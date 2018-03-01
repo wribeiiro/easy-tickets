@@ -12,7 +12,7 @@
 			if (empty($user)):
 				redirect('');
 			else:
-				$sessao = $user;
+				return $sessao = $user;
 			endif;
 	    }
 	}

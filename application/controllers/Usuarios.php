@@ -10,7 +10,7 @@ class Usuarios extends CI_Controller {
 		$this->load->library('Controle_acesso', 'controle_acesso');
 		$this->controle_acesso->controlar();
 	}
-
+ 
 
 	public function index(){
 		

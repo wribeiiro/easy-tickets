@@ -16,6 +16,7 @@ class Principal extends CI_Controller {
 		$this->dados['titulo']     = 'Easy Tickets | Principal';
 		$this->dados['totalUsers'] = $this->usuarios->contarUsuarios();
 		$this->dados['noticias']   = $this->getNoticias();
+		$this->dados['sessao'] = $this->controle_acesso->controlar();
 		$this->load->view('Principal/index', $this->dados);
 	}
 
