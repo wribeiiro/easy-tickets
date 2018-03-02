@@ -9,6 +9,7 @@ class Principal extends CI_Controller {
 		$this->load->model('Usuarios_model', 'usuarios');
 		$this->load->library('Controle_acesso', 'controle_acesso');
 		$this->controle_acesso->controlar();
+		$this->dados['sessao']     = $this->controle_acesso->controlar();
 	}
 
 	public function index() {
@@ -16,7 +17,6 @@ class Principal extends CI_Controller {
 		$this->dados['titulo']     = 'Easy Tickets | Principal';
 		$this->dados['totalUsers'] = $this->usuarios->contarUsuarios();
 		$this->dados['noticias']   = $this->getNoticias();
-		$this->dados['sessao'] = $this->controle_acesso->controlar();
 		$this->load->view('Principal/index', $this->dados);
 	}
 

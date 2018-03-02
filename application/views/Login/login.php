@@ -14,6 +14,8 @@
   <link href="<?php echo base_url() ?>assets/template-sbadmin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
   <link href="<?php echo base_url() ?>assets/template-sbadmin/css/sb-admin.css" rel="stylesheet">
+  <link href="<?php echo site_url() ?>assets/toastr-master/build/toastr.css" rel="stylesheet">
+  <script src="<?php echo site_url() ?>assets/toastr-master/build/toastr.min.js"></script>
 </head>
 
 <body class="bg-dark">
@@ -30,7 +32,7 @@
                   ;
           endif;
         ?>
-        <form method="post" action="<?php echo base_url('Login/logar') ?>">
+        <form method="post" id="form_login" action="<?php echo base_url('Login/logar') ?>">
           <div class="form-group">
             <label for="exampleInputEmail1">Usuário</label>
             <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Enter email" name="login">

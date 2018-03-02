@@ -53,5 +53,10 @@ $route['default_controller']     = 'Login/index';
 $route['Principal']			     = 'Principal/index';
 $route['Usuarios'] 				 = 'Usuarios/listarUsuarios';
 $route['Usuarios/adicionar']     = 'Usuarios/adicionarusuarios';
+$route['Usuarios/salvarUsuarios'] = 'Usuarios/salvarUsuarios';
+$route['Usuarios/editarUsuarios'] = 'Usuarios/editarUsuarios';
+$route['Usuarios/apagarUsuarios'] = 'Usuarios/apagarUsuarios';
+$route['Usuarios/editarUsuarios/(:num)'] = 'Usuarios/editarUsuarios/$1';
+
 $route['404_override'] 		     = '';
 $route['translate_uri_dashes']   = FALSE;

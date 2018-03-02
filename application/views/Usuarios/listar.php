@@ -40,16 +40,37 @@
                                     echo '<td>' . $user->id. '</td>';
                                     echo '<td>' . $user->nome. '</td>';
                                     echo '<td>' . $user->email. '</td>';
-                                    echo '<td><a href="" class="badge badge-primary" style="margin: 3px">Editar</a><a href="" class="badge badge-danger">Excluir</a></td>';
+                                    echo '<td>
+                                        <a href="editarusuarios/'.$user->id.'" class="badge badge-primary" style="margin: 3px">Editar</a>
+                                        <a href="" onclick="deletaReg('.$user->id.')" class="badge badge-danger deleta" style="margin: 3px">Excluir</a>
+                                    </td>';
                                     echo '</tr>';
                                 endforeach;
                             ?>
                         </tbody>
-                    </table>
+                    </table>    
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<script type = "text/javascript">
+    function deletaReg(id) {
+    
+        $.ajax({
+            url: "<?php echo site_url('Usuarios/apagarUsuarios'); ?>",
+            type: 'post',
+            data: {id: id},
+            success: function(retorno){ 
+                toastr.success('Registro deletado com sucesso! :)');
+                tr.fadeOut();
+            },
+            error: function(retorno) {
+                toastr.error('Erro ao deletar registro :(!');
+                console.log(retorno);
+                console.log(id);
+            }
+        });
+    }
+</script>
 <?php $this->load->view('includes/footer'); ?>

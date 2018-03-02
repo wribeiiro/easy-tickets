@@ -7,6 +7,7 @@ class Login extends CI_Controller {
 
 		parent::__construct();
 		$this->load->model('Login_model', 'login');
+		$this->load->model('Usuarios_model', 'usuario');
 	}
 
 	public function index() {
@@ -25,6 +26,14 @@ class Login extends CI_Controller {
 
 		if (count($this->dados['login']) == 1):
 			$this->session->set_userdata("sessao", $this->dados['login']);
+			// adicionar log do usuario
+			foreach ($this->dados['login'] as $login):
+				$dados['id_usuario'] = $login->id;
+				$dados['login']      = $login->nome;
+				$dados['data_hora']  = date('Y-m-d H:m:i');
+				$this->usuario->adicionarLogUsuarios($dados);
+			endforeach;
+
 			redirect('Principal/');
 		else:
 			$this->session->set_flashdata('erro_login', 'Usuário ou senha inválidos!');
