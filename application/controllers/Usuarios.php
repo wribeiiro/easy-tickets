@@ -71,9 +71,8 @@ class Usuarios extends CI_Controller {
 		$this->load->view('Usuarios/editar', $dados);
 	}
 
-	public function apagarUsuarios($id=NULL) {
-		$id = $this->input->post('id');
-        $this->usuarios->apagaUsuarios($id);
+	public function apagarUsuarios() {
+		$this->usuarios->apagaUsuarios($_POST["id"]);
 	}
 }
 

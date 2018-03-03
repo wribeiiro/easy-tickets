@@ -48,10 +48,10 @@ class Usuarios_model extends CI_Model {
 		endif;
 	}
 
-	public function apagaUsuarios($id) {
-		$this->db->where('id', $id); 
-		$this->db->limit(1);
-		$this->db->delete('usuarios');	
+	public function apagaUsuarios($id){
+		$this->db->where('id', $id);
+		$this->db->delete('usuarios');
+
 	}
 }
 

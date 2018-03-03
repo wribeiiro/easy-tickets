@@ -21,7 +21,7 @@ class Principal extends CI_Controller {
 	}
 
 	public function getNoticias() {
-		if($file = simplexml_load_file('http://www.contabeis.com.br/rss/noticias/') or die('Erro ao buscar XML!')):
+		if($file = simplexml_load_file('http://pox.globo.com/rss/g1/tecnologia/') or print('Erro ao buscar XML!')):
 			return $file; 
 		endif;
 	}
