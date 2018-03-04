@@ -8,6 +8,7 @@
     <meta name="author" content="Wellisson Ribeiro">
     <title><?php echo $titulo ?></title>
     <!-- Bootstrap core CSS-->
+    <link rel="icon" href="<?php echo site_url() ?>assets/img/favicon.png">
     <link href="<?php echo site_url() ?>assets/template-sbadmin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- Custom fonts for this template-->
