@@ -8,7 +8,6 @@ class Login_Model extends CI_Model {
 		parent::__construct();
 	}
  
-
  	public function getusuarios($login=NULL, $senha=NULL) {
 
  		$this->db->where("login", $login);

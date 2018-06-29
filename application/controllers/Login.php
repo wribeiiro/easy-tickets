@@ -6,7 +6,7 @@ class Login extends CI_Controller {
 	public function __construct() {
 
 		parent::__construct();
-		$this->load->model('Login_model', 'login');
+		$this->load->model('Login_Model', 'login');
 		$this->load->model('Usuarios_model', 'usuario');
 	}
 
@@ -24,8 +24,9 @@ class Login extends CI_Controller {
 
 		$this->dados['login'] = $this->login->getusuarios($login, $senha);
 
-		if (count($this->dados['login']) == 1):
+		if (count($this->dados['login']) > 0): 
 			$this->session->set_userdata("sessao", $this->dados['login']);
+
 			// adicionar log do usuario
 			foreach ($this->dados['login'] as $login):
 				$dados['id_usuario'] = $login->id;
