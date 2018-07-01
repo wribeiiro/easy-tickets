@@ -53,7 +53,7 @@
             </div>
         </div>
     </div>
-</div>x
+</div>
 <script type = "text/javascript">
 
     $(document).on('click', '.deleta', function(){  

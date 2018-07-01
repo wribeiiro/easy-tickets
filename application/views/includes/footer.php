@@ -42,7 +42,6 @@
     <script src="<?php echo site_url() ?>assets/template-sbadmin/js/sb-admin-datatables.min.js"></script>
     <script src="<?php echo site_url() ?>assets/template-sbadmin/js/sb-admin-charts.min.js"></script>
     <script src="<?php echo site_url() ?>assets/js/scripts.js"></script>
-  </div>
 </body>
 
 </html>

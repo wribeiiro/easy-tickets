@@ -26,7 +26,7 @@ class Usuarios_model extends CI_Model {
 
 	public function adicionarLogUsuarios($dados=NULL){
 		if($dados != NULL):
-			$this->db->query('logusuarios', $dados);
+			$this->db->insert('logusuarios', $dados);
 		endif;
 	}
 
